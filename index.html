@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LzBirthday | Ucapan Ulang Tahun 🎂</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat:wght@400;700&family=Indie+Flower&family=Shadows+Into+Light&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Initial Screen (Form Input) -->
+    <div id="initialScreen" class="initial-screen">
+      <div class="initial-container">
+        <div class="initial-card">
+          <h1 class="initial-title">
+            <span class="title-line-1">Selamat Datang!!!</span>
+            <span class="title-line-2">🎂 🎉</span>
+          </h1>
+
+          <div class="cake-wrapper">
+            <div class="initial-cake">
+              <div class="cake-top">
+                <div class="candle"></div>
+                <div class="flame"></div>
+              </div>
+              <div class="cake-middle"></div>
+              <div class="cake-bottom"></div>
+            </div>
+          </div>
+
+          <p class="initial-instruction">
+            Masukkan nama kamu untuk melihat kejutan spesial 🎁
+          </p>
+
+          <div class="input-group">
+            <input
+              type="text"
+              id="userName"
+              class="name-input"
+              placeholder="Ketik nama kamu di sini..."
+              maxlength="30"
+            />
+            <div class="input-icon">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+
+          <button id="startBtn" class="btn-start" disabled>
+            <i class="fas fa-heart"></i> Aku Ada Sesuatu Buat Kamu!
+          </button>
+
+          <p class="hint">Isi nama dulu ya untuk melanjutkan</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="mainContent" class="container" style="display: none">
+      <!-- Background decoration -->
+      <div class="decoration">
+        <div class="balloon balloon-1"></div>
+        <div class="balloon balloon-2"></div>
+        <div class="balloon balloon-3"></div>
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="heart heart-1"></div>
+        <div class="heart heart-2"></div>
+      </div>
+
+      <!-- Main card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="cake">
+            <div class="cake-top">
+              <div class="candle"></div>
+              <div class="flame"></div>
+            </div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+          </div>
+          <h1 class="birthday-title">
+            <span class="title-line-1">HAPPYYY BIRTHDAYYY</span>
+            <span class="title-line-2" id="personalizedGreeting">🎉 🎂 🎈</span>
+          </h1>
+        </div>
+
+        <div class="card-content">
+          <p class="instruction">
+            Klik tombol di bawah yaa!! Ada kejutanya lohhh
+          </p>
+
+          <div class="message-container">
+            <p id="message" class="message">
+              Semoga di hari spesial ini kamu dikelilingi banyak hal baik yaa,
+              kebahagiaan yang gada habisnyaa, dan momen kecil yang bikin hati
+              tenang. Semoga semua harapan pelan-pelan ketemu jalannya, dan hal
+              baik di hari ini bisa kamu simpan lama-lamaaa 🤍
+            </p>
+          </div>
+
+          <div class="button-group">
+            <button id="messageBtn" class="btn btn-primary">
+              <i class="fas fa-gift"></i> Buka Ucapan Disini
+            </button>
+            <button id="confettiBtn" class="btn btn-secondary">
+              <i class="fas fa-birthday-cake"></i> Bling-bling Lucu
+            </button>
+          </div>
+
+          <div class="wishes">
+            <h3><i class="fas fa-heart"></i> Doa & Harapan</h3>
+            <div class="wish-list">
+              <div class="wish-item">Semoga panjang umur & sehat selaluu</div>
+              <div class="wish-item">Semoga dilimpahkan kebahagiaanyaa</div>
+              <div class="wish-item">
+                Semoga selalu dikelilingi hal-hal baikk
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <p>birthday by liza sania</p>
+          <div class="social-icons"></div>
+        </div>
+      </div>
+
+      <!-- Floating elements -->
+      <div class="floating-elements">
+        <div class="floating-icon">🎁</div>
+        <div class="floating-icon">✨</div>
+        <div class="floating-icon">🎈</div>
+        <div class="floating-icon">🥳</div>
+      </div>
+    </div>
+
+    <!-- Confetti canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Simpan file birthday.mp3 di folder yang sama -->
+    <audio id="birthdayAudio" autoplay loop preload="auto">
+      <source src="birthdayAudio.mpeg" type="audio/mpeg" />
+      <source src="birthdayAudio.mpeg" type="audio/ogg" />
+      <!-- Fallback message -->
+      <p>Browser tidak mendukung audio. Selamat ulang tahun! 🎂</p>
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
